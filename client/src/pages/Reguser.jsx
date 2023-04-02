@@ -26,8 +26,8 @@ function Reguser() {
 
    const handleSubmit =  async (e) =>{
     e.preventDefault()
-    setdata({...data,id:userList[0]._id})
     if(Regtype === 'Update'){
+      setdata({...data,id:userList[0]._id})
       if(data.password !== data.cpassword){
         alert("Paswword and confirm password must be same")
       }
@@ -42,12 +42,13 @@ function Reguser() {
       if(data.password !== data.cpassword){
         alert("Paswword and confirm password must be same")
       }
-    let message = await axios.post('http://localhost:8000/Reguser',data)
+    let response = await axios.post('http://localhost:8000/Reguser',data)
 
-    console.log(message);
-
-    if(message){
-      return alert(`${message.data.message}`)
+    console.log(response);
+    
+    navigate('/')
+    if(response.data.message){
+      return alert(`${response.data.message}`)
     }
   }
    }
