@@ -26,6 +26,9 @@ const productsSlice = createSlice({
        },
        Updateapi:(state,action) => {
           state.Regtype="Update"
+       },
+       removeTOVIEW:(state,action) =>{
+           state.userList = []
        }
       },
     extraReducers:{
@@ -45,7 +48,7 @@ const productsSlice = createSlice({
     }
 })
 
-export const{addToVIEW,Updateapi} = productsSlice.actions;
+export const{addToVIEW,Updateapi,removeTOVIEW} = productsSlice.actions;
 
 
 export default productsSlice.reducer;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./User.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addToVIEW, userFetch } from "../redux/Slice";
+import { addToVIEW, removeTOVIEW, userFetch } from "../redux/Slice";
 import { useNavigate, Link } from "react-router-dom";
 
 import Form from "react-bootstrap/Form";
@@ -15,6 +15,7 @@ function Userdata() {
 
   useEffect(() => {
     dispatch(userFetch());
+    dispatch(removeTOVIEW());
   }, [userFetch]);
 
   const handlechange = (item) => {
@@ -26,10 +27,11 @@ function Userdata() {
       <div className="container">
         <div>
           <Form>
-            <InputGroup className="my-3">
+            <InputGroup   className="my-3">
               <Form.Control
                 onChange={(e) => setsearch(e.target.value)}
                 placeholder="Search...."
+                style={{width:'80% !important'}}
               />
             </InputGroup>
           </Form>
