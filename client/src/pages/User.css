@@ -1,0 +1,51 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.single-container {
+  width: 60%;
+  height: 100px;
+  margin-top: 6px;
+  background: #fefeff;
+  border: 1px solid #53c352;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+}
+.single-container h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  color: #000000;
+}
+.button-view {
+  width: 80px;
+  height: 40px;
+  color: #fefeff;
+  background: #53c352;
+  border: none;
+  border-radius: 22px;
+  margin-right: 20px;
+}
+.Register-btn{
+  background: #53c352;
+  border-radius: 5px;
+  width: 116px;
+  height: 40px;
+  border: none;
+  color: #ffffff;
+  margin-left: 20%;
+  align-self: flex-start;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+}
